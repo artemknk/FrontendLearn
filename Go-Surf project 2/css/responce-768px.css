@@ -1,0 +1,187 @@
+@media(max-width: 1000px) {
+  .header {
+    width: 100px;
+  }
+  .header_btn, .header_p{
+    font-size: 5vw;
+  }
+  .page_title {
+    top: 0;
+    right: 50px;
+  }
+  .beach{
+    flex-direction: column;
+    gap: 15px;
+    right: 50px;
+    width: 340px;
+    bottom: 50px;
+  }
+  .beach_shore{
+    width: 100%;
+  }
+  .beach_shore_number {
+    font-size: 35px;
+  }
+  .beach_shore_name {
+    font-size: 30px;
+  }
+  .map {
+    display: none;
+  }
+  .shores_collage{
+    padding-top: 15px;
+    padding-left: 120px;
+  }
+  .shores_collage_row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .shores_collage_column {
+    height: auto;
+    padding: 30px 15px 60px;
+    width: auto;
+  }
+  .shores_collage_name {
+    width: auto;
+    margin: 15px 0;
+  }
+  .north_beach, .south_beach, .east_beach, .west_beach {
+    top: 0;
+    margin: 0;
+    background-position: center;
+  }
+  .shores_collage_location {
+    transform: rotate(0);
+    left: 15px;
+    top: 5px;
+    bottom: 0;
+    width: auto;
+  }
+  .btn_cont{
+    margin: 0;
+    right: 0;
+    left: auto;
+  }
+  .travel {
+    padding-left: 100px;
+    position: relative;
+  }
+
+  .travel_img_beach {
+    position: relative;
+    top: 600px;
+  }
+  div.travel_img_beach img {
+    width: 100%;
+  }
+  .travel_title {
+    right: 40px;
+    position: absolute;
+  }
+  .travel_title::after {
+    top: 30px;
+    left: 190px;
+  }
+  .travel_img_plane {
+    display: none;
+  }
+  .travel_shore_title {
+    right: 40px;
+  }
+  .travel_flight_character {
+    flex-direction: column;
+    align-items: end;
+    margin: 0px 20px auto 0;
+    gap: 20px;
+    width: 98%;
+    /* background-image: url(../img/Bitmap_Travel_Section.png);
+    background-repeat: no-repeat;
+    background-position-y: 520px; */
+  }
+  .travel_flight_text {
+    transform: none;
+    left: 0;
+    width: 100%;
+  }
+  .travel_flight_box {
+    width: 50%;
+    height: 100px;
+    padding: 0;
+  }
+  .travel_flight_info {
+    width: auto;
+  }
+  .sleep {
+    padding-left: 100px;
+    position: relative;
+  }
+  .sleep_title {
+    position: absolute;
+    right: 50px;
+  }
+  .sleep_resorts_title {
+    top: 190px;
+    right: 50px;
+  }
+  .sleep_rating {
+    position: absolute;
+    top: 350px;
+  }
+  .sleep_rating_page::after {
+    top: 15px;
+  }
+  .sleep_resorts_character {
+    flex-direction: column;
+    align-items: end;
+    margin: 115px 50px auto 0;
+  }
+  .sleep_resorts_box {
+    width: 200px;
+    height: 140px;
+    bottom: 121px;
+  }
+  .sleep_resorts_text {
+    transform: none;
+    left: 0;
+    width: 240px;
+  }
+  .surfboard-box_content {
+    width: 179px;
+  }
+  .accessories_block {
+    left: 155px;
+    bottom: 240px;
+  }
+  .accessories_article {
+    
+  }
+  .rating_stars {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  div.rating_stars img {
+    transform: scale(1.2);
+  }
+  .shop_title {
+    margin-left: 25px;
+  }
+  .shop_price {
+    top: 10px;
+  }
+  .surfboard_cont {
+    top: 271px;
+    left: auto;
+    margin: 0;
+    right: 10px;
+  }
+  .surfboard-box_circle {
+    display: none;
+  }
+  .surfboard-box_content {
+    display: none;
+  }
+  .btn_cont_shop {
+    top: -150px;
+    left: 0px;
+  }
+}

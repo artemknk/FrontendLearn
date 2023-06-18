@@ -1,0 +1,27 @@
+
+@media(max-width: 1100px){
+  .activeNav img{
+  transform: scale(0.8);
+}
+.site_navigation {
+  margin-top: 10px;
+}
+.header_btn{ 
+  height: 60%;
+}
+.header_btn_conteiner {
+  height: 200px;
+}
+.sleep_img_hotel {
+  position: relative;
+  top: 600px;
+}
+.sleep_resorts_box {
+  width: 200px;
+  height: 140px;
+  bottom: 121px;
+}
+div.sleep_img_hotel img {
+  width: 100%;
+}
+}

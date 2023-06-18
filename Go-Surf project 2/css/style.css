@@ -1,0 +1,1479 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800&family=Lato:wght@300;700&family=Roboto:wght@100&display=swap');
+
+body {
+  background-color: black;
+  margin: 0;
+  overflow-x: hidden;
+}
+.vertical{
+  transform: rotate(-90deg);
+  display: block;
+}
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed ;
+  left: 0; 
+  top: 0;
+  width: 130px;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.457);
+  z-index: 9999;
+  padding-bottom: 10px; 
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+.header_btn_conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header_btn {
+  width: 130px;
+  text-align: center;
+  background: #4AF6CD;
+  height: 165px;
+  border: none;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4vw;
+  line-height: 86px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+}
+.header_p {
+  margin: 0px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 4vw;
+  color: #FFFFFF;
+}
+.site_navigation {
+  line-height: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+.navigation_btn {
+  list-style-type: none;
+  
+}
+.header_search {
+  background-image: url(../img/Search.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+}
+.big_date {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 64px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+}
+.small_date {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+.header_location {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 1.05px;
+  color: #FFFFFF;
+}
+.activeNav{
+  cursor: pointer;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+  display: block;
+}
+.activeNav img{
+  transform: scale(1.2);
+}
+.activeNav:hover .imageNav{
+  fill: #4AF6CD;
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+
+}
+.activeNav:hover{
+  color: #4AF6CD;
+}
+/* .down_arrows {
+  margin-left: 170px;
+  width: 30px;
+  height: 30px;
+  margin-top: 720px;
+  margin-bottom: -40px;
+} */
+.section{
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.main{
+  background-image: url(../img/main_img.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page_title {
+  top: 40%;
+  right: 84px;
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  display: inline-block;
+  color: #FFFFFF;
+}
+.page_title_text {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.page_title_beach {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 86px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.page_title_condition {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.shape_copy {
+  margin-left: 470px;
+  height: 26px;
+  width: 26px;
+}
+.beach_shore {
+  color: #FFFFFF;
+}
+.beach {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.6%;
+  position: absolute;
+  right: 84px;
+  bottom: 26px;
+  width: 60%;
+}
+
+.beach_shore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: 4px solid #FFFFFF;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 23%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  color: white;
+}
+
+.beach_shore:hover{
+  border-color: #4AF6CD;
+}
+.beach_shore:hover .beach_shore_number{
+  color: #4AF6CD;
+}
+.beach_shore:hover .beach_shore_name{
+  color: #4AF6CD;
+}
+.beach_shore_number {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  width: 100px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.beach_shore_name {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  width: 100px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+.map {
+  background-color: #1C2121;
+}
+.world_map {
+  margin-left: 290px;
+  margin-top: 160px;
+  position: absolute;
+}
+/* попытался изобразить линию у текста таким образом, друг сказал что это лютый костыль */
+.before_line:before {
+  display: inline-block;
+  content: "";
+  width: 84px;
+  height: 1px;
+  background: #979797;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+.map_title_surf {
+  margin-left: 180px;
+  margin-top: 80px;
+  font-weight: 800;
+  font-size: 130px;
+  line-height: 125px;
+  color: rgba(255,255,255,0.06);
+  position: relative;
+  display: inline-block;
+  visibility: visible;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+}
+.map_title_surf h3 {
+  margin-bottom: 40px;
+  font-weight: 800;
+  font-size: 60px;
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  color: #fff;
+}
+.map_title_surf h3::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4AF6CD;
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.section {
+  position: relative;
+}
+.map_subtitle_surf {
+  text-align: right;
+  position: absolute;
+  top: 120px;
+  left: 510px;
+  right: 60px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.map_img{
+  width: 90%;
+}
+.location_subtitle {
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.5;
+  display: inline-block;
+  padding-left: 103px;
+  position: relative;
+}
+.location_subtitle::before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  left: 0;
+  top: 50%;
+}
+.country_subtitle {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-transform: uppercase;
+  text-align: right;
+}
+.location_dots {
+  position: absolute;
+  background-image: url(../img/mapCard.png);
+  height: 65%;
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
+  right: 60px;
+  width: 75%;
+  background-position: center;
+}
+.green-dote{
+  position: absolute; 
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: #4AF6CD;
+  -webkit-box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+          box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.837777);
+
+  
+}
+.RCA {
+  left: 50%;
+  top: 430px;
+}
+.Brazil {
+  left: 32%;
+  top: 390px;
+}
+.Cuba {
+  left: 26%;
+  top: 254px;
+}
+.Hawaii {
+  left: 0;
+  top: 240px;
+}
+.California {
+  left: 12%;
+  top: 200px;
+}
+.Europe {
+  left: 46%;
+  top: 150px;
+}
+.Maldives {
+  left: 63%;
+  top: 290px;
+}
+.Australia {
+    left: 88%;
+    top: 405px;
+}
+.location_character_card {
+  bottom: 30px;
+  right: -130px;
+  position: absolute;
+  width: 280px;
+  height: 215px;
+  background: #0F1010;
+  opacity: 0.9;
+  border-radius: 6px;
+  display: none;
+  z-index: 15;
+}
+.location_beach_country {
+  margin-left: 32px;
+  margin-top: 24px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.location_beach_country h3 {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+  margin-top: 22px;
+  margin-bottom: 0px;
+}
+.location_beach_country h3::after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4AF6CD;
+  position: absolute;
+  top: 60px;
+  left: 31px;
+}
+.location_arrow {
+  width: 16px;
+  height: 13px;
+  position: absolute;
+  top: 28px;
+  right: 32px;
+}
+.location_character_table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 125px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  color: #fff;
+}
+.location_character_column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.location_character_cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 22px;
+}
+.location_value {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.location_condition {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.location_card_img {
+  margin-bottom: 10px;
+  height: 28px;
+}
+
+
+
+.green-dote:hover .location_character_card{
+  display: block;  
+}
+.shores_collage {
+  padding-left: 150px;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  background: #1C2121;;
+}
+.shores_collage_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.shores_collage_column {
+  width: 390px;
+  height: 680px;
+  padding: 20px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border: solid 3px white;
+  border-radius: 12px;
+}
+.gray_list{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #49494946;
+}
+
+.north_beach {
+  background-image: url(../img/North_Shores_Collage.png);
+  
+}
+.south_beach {
+  background-image: url(../img/South_Shores_Collage.png);
+  margin-left: -20px;
+  top: -33px;
+}
+.west_beach {
+  background-image: url(../img/West_Shores_Collage.png);
+  top: 37px;
+  margin-left: -35px;
+}
+.east_beach {
+  background-image: url(../img/East_Shores_Collage.png);
+  margin-left: -20px;
+  top: -33px;
+}
+.shores_collage_name {
+  position: relative;
+  width: 119px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+.shores_collage_location {
+  position: absolute;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: -200px;
+  margin-left: 30px;
+  bottom: 320px;
+  width: 160%;
+}
+.btn_cont {
+  width: 278px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  right: 0;
+  margin: auto;
+}
+.shores_collage_btn_span {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.shores_callage_btn {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #4AF6CD;
+  width: 140px;
+  height: 80px;
+  border: none;
+  text-align: left;
+  padding-left: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../img/vectorRight.svg);
+  background-position: 110px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 8px;
+}
+.travel {
+  padding-left: 130px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #1C2121;
+}
+.travel_title {
+  margin-left: 130px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 156px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.travel_title:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4AF6CD;
+  position: absolute;
+  top: 30px;
+  left: 450px;
+}
+div.travel_img_beach img {
+  width: 70%;
+  height: auto;
+}
+.travel_shore_title {
+  position: absolute;
+  text-align: right;
+  top: 120px;
+  right: 75px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.shore_title_page {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.shore_title_text {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.shore_title_page:before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 130px;
+}
+.travel_airline {
+  position: relative;
+  text-align: left;
+  bottom: 10px;
+  margin-left: 25px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  width: 400px;
+}
+.travel_airline_page {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: left;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.travel_airline_text {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.travel_airline_page:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 83px;
+  left: 145px;
+}
+.air_logo {
+  margin-left: 360px;
+  margin-top: -70px;
+}
+.travel_img_plane {
+  position: absolute;
+  background-image: url(../img/Bitmap_Travel_Section.png);
+  right: 0;
+  bottom: 600px;
+  width: 722px;
+  height: 310px;
+
+
+}
+.travel_flight_character {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 102px auto 0;
+  justify-content: space-between;
+  padding: 40px 0;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+}
+.travel_flight_box {
+  width: 18%;
+  position: relative;
+  height: 187px;
+  padding-left: 40px;
+  overflow: hidden;
+}
+.travel_flight_box p {
+  margin: 0;
+}
+.travel_flight_text {
+  position: absolute;
+  width: 190px;
+  left: -80px;
+  top: 80px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.travel_flight_info {
+  width: 242px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 29px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.btn_cont_travel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 357px;
+  margin: 78px auto 0;
+  gap: 19px;
+}
+.travel_flight_btn_span {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.travel_flight_btn {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #4AF6CD;
+  width: 201px;
+  height: 80px;
+  border: none;
+  text-align: left;
+  padding-left: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../img/vectorRight.svg);
+  background-position: 160px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 8px;
+}
+
+.sleep {
+  padding-left: 130px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #1C2121;
+}
+.sleep_title {
+  position: relative;
+  margin-left: 130px;
+  top: 50px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 156px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.sleep_title:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4AF6CD;
+  position: absolute;
+  top: 30px;
+  left: 140px;
+}
+.sleep_resorts_title {
+  position: absolute;
+  text-align: right;
+  top: 120px;
+  right: 75px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.resorts_title_page {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.resorts_title_text {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: right;
+  text-transform: uppercase;
+}
+.resorts_title_page:before {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: 15px;
+  right: 160px;
+}
+.sleep_rating {
+  position: relative;
+  text-align: left;
+  bottom: 70px;
+  margin-left: 25px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  color: #fff;
+}
+.sleep_rating_page {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: left;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.sleep_rating_text {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.sleep_rating_page:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 87px;
+  left: 140px;
+}
+.rating_stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 220px;
+  margin-top: -74px;
+}
+div.rating_stars img {
+  -webkit-transform: scale(1.7);
+      -ms-transform: scale(1.7);
+          transform: scale(1.7);
+}
+.sleep_resorts_character {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 102px auto 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 40px;
+
+}
+.sleep_resorts_box {
+  width: 181px;
+  position: relative;
+  height: 187px;
+  padding-left: 40px;
+  overflow: hidden;
+}
+.sleep_resorts_box p {
+  margin: 0;
+}
+.selector_btn_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+}
+.selector_btn_plus {
+  margin: 8px;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: none;
+  background-image: url(../img/Plus_Btn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #4AF6CD;
+  position: relative;
+}
+.selector_btn_minus {
+  margin: 8px;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: none;
+  background-image: url(../img/Minus_Btn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #4AF6CD;
+  position: relative;
+}
+.sleep_resorts_text {
+  position: absolute;
+  width: 190px;
+  left: -80px;
+  top: 80px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.sleep_resorts_info {
+  width: 242px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.btn_cont_sleep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 357px;
+  margin: 78px auto 0;
+  gap: 19px;
+}
+.sleep_resorts_btn_span {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.sleep_resorts_btn {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #4AF6CD;
+  width: 170px;
+  height: 80px;
+  border: none;
+  text-align: left;
+  padding-left: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../img/vectorRight.svg);
+  background-position: 125px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 8px;
+}
+div.sleep_img_hotel img {
+  width: 70%;
+  height: auto;
+}
+.shop {
+  height: 1209px;
+  padding-left: 130px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../img/Shop_Image.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #1C2121;
+  background-size: 1054px;
+}
+.shop_title {
+  position: relative;
+  margin-left: 130px;
+  top: 50px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 156px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.shop_title:after {
+  content: '';
+  width: 80px;
+  height: 1px;
+  background-color: #4AF6CD;
+  position: absolute;
+  top: 30px;
+  left: 122px;
+}
+.surfboard_cont {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 695px;
+  width: 228px;
+  background-image: url(../img/Shop_Surfboard.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.box-1 {
+  position: absolute;
+  right: 30px;
+  top: 210px;
+}
+.box-2 {
+  position: absolute;
+  left: 20px;
+  top: 350px;
+}
+.box-3 {
+  position: absolute;
+  left: 40px;
+  bottom: 190px;
+}
+.surfboard-box_circle {
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  position:relative;
+  background-color:#fff;
+  cursor:pointer
+}
+.circle-row {
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+  width: 80%;
+  height: 4px;
+  background-color: #4AF6CD;
+}
+.circle-column {
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  margin: auto;
+  width: 80%;
+  height: 4px;
+  background-color: #4AF6CD;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.surfboard-box_content {
+  position:absolute;
+  left:30px;
+  top:-15px;
+  width:300px;
+  text-transform:uppercase;
+  padding-left:104px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.surfboard-box_content::before {
+  content:'';
+  position:absolute;
+  width:80px;
+  height:1px;
+  background-color:#fff;
+  left:0;
+  top:35%
+}
+.shop_style_title {
+  margin-top: 140px;
+  margin-left: 25px;
+  position: relative;
+  width: 350px;
+}
+.shop_title_page {
+  margin-bottom: 7px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.shop_title_text {
+  margin-top: 7px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.shop_stars {
+  margin: 0;
+  margin-top: 140px;
+  margin-left: 20px;
+}
+.shop_price {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  left: 25px;
+  top: 150px;
+}
+.shop_price_dollars {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.shop_price_penny {
+  position: absolute;
+  right: -25px;
+  -webkit-transform: translateY(-15%);
+      -ms-transform: translateY(-15%);
+          transform: translateY(-15%);
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.btn_cont_shop {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 170px 0 0 45px;
+  gap: 19px;
+  top: 100px;
+  width: 400px;
+}
+.shop_btn_span {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.shop_btn {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #4AF6CD;
+  width: 112px;
+  height: 80px;
+  border: none;
+  text-align: left;
+  padding-left: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../img/vectorRight.svg);
+  background-position: 70px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 8px;
+}
+.accessories_block {
+  width: 410px;
+  position: absolute;
+  bottom: 160px;
+  right: 0px;
+}
+.accessories_title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.accessories_article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 65px;
+}
+.accessories_article_one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.accessories_article_two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.accessories_article_name {
+  margin: 0;
+  margin-top: 10px;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+.accessories_article_price {
+  margin: 0;
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.surfboard-box:hover .circle-column {
+  opacity: 0;
+}
+.surfboard-box:hover .surfboard-box_content{
+  opacity: 1;
+}
+.shop_down_btn {
+  position: absolute;
+  width: 240px;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
