@@ -6,22 +6,75 @@
 .site_navigation {
   margin-top: 10px;
 }
+.page_title {
+  top: 15%;
+}
 .header_btn{ 
   height: 60%;
 }
 .header_btn_conteiner {
   height: 200px;
 }
+.map {
+  height: 120vh;
+}
+.location_dots {
+  height: 60%;
+}
+div.travel_img_beach img {
+  width: 100%;
+}
+.shores_collage_location {
+  left: -210px;
+  width: 200%;
+  margin-left: 10px;
+}
+.west_beach {
+  top: 0;
+}
+.east_beach {
+  background-position: bottom;
+}
+.shores_collage_btn_span {
+  font-size: 26px;
+}
+.shores_callage_btn {
+  font-size: 26px;
+  width: 110px;
+  height: 50px;
+  padding-left: 10px;
+  background-position: 80px;
+  background-size: 20px;
+}
+.travel_flight_info {
+  font-size: 26px;
+}
 .sleep_img_hotel {
   position: relative;
-  top: 600px;
+}
+.sleep_resorts_character {
+  padding: 0;
 }
 .sleep_resorts_box {
   width: 200px;
-  height: 140px;
   bottom: 121px;
+}
+.btn_cont_sleep {
+  margin: 0 auto 0;
+}
+.sleep_resorts_info {
+  font-size: 32px;
 }
 div.sleep_img_hotel img {
   width: 100%;
+}
+.surfboard_cont {
+  left: 88px;
+}
+.surfboard-box_content {
+  width: 270px;
+}
+.accessories_block {
+  width: 365px;
 }
 }

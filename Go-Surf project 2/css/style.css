@@ -321,6 +321,7 @@ body {
   height: 1px;
   background: #979797;
   margin-top: -3px;
+  margin-right: 10px;
   vertical-align: middle;
 }
 .map_title_surf {
@@ -401,7 +402,7 @@ body {
 .location_dots {
   position: absolute;
   background-image: url(../img/mapCard.png);
-  height: 65%;
+  height: 55%;
   background-repeat: no-repeat;
   background-size: 100% 500px;
   right: 60px;
@@ -639,7 +640,7 @@ body {
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  left: -200px;
+  left: -250px;
   margin-left: 30px;
   bottom: 320px;
   width: 160%;
@@ -1036,7 +1037,6 @@ div.rating_stars img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 40px;
 
 }
 .sleep_resorts_box {

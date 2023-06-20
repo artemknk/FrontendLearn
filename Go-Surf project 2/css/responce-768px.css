@@ -61,6 +61,11 @@
     margin: 0;
     right: 0;
     left: auto;
+    width: 200px;
+  }
+  .btn_cont_travel {
+    bottom: 100px;
+    position: relative;
   }
   .travel {
     padding-left: 100px;
@@ -69,7 +74,7 @@
 
   .travel_img_beach {
     position: relative;
-    top: 600px;
+    top: 540px;
   }
   div.travel_img_beach img {
     width: 100%;
@@ -84,6 +89,13 @@
   }
   .travel_img_plane {
     display: none;
+  }
+  .travel_airline {
+    bottom: 150px;
+  }
+  .travel_flight_character {
+    position: relative;
+    bottom: 100px;
   }
   .travel_shore_title {
     right: 40px;
@@ -151,9 +163,6 @@
   .accessories_block {
     left: 155px;
     bottom: 240px;
-  }
-  .accessories_article {
-    
   }
   .rating_stars {
     margin-top: 0;
