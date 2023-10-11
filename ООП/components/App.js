@@ -51,28 +51,3 @@ class App {
 }
 
 new App()
-
-
-
-
-// class Animal {
-//   stupid = true
-//   constructor(name, hello) {
-//     this.name = name
-//     this.hello = hello
-//     this.sayHi()
-//   }
-
-//   sayHi() {
-//     console.log(this.hello)
-//   }
-
-// }
-
-
-
-// const dog = new Animal('dog', 'woof')
-// const cat = new Animal('cat', 'meow')
-// const bird = new Animal('bird', 'tweet')
-
-// console.log({dog, cat, bird});
