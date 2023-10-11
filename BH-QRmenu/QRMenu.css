@@ -1,0 +1,33 @@
+.section {
+  margin: 0 auto;
+  padding: 2em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 24rem;
+  border: 1px solid black;
+}
+.menu__item__card {
+  display: flex;
+  flex-direction: column;
+  width: 23em;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: aqua;
+}
+.menu__item {
+  padding: 1em;
+}
+.menu__img{
+  display: flex;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 1s ease, opacity 1s ease;
+}
+.menu__img__active {
+  opacity: 1;
+  height: 21em;
+}

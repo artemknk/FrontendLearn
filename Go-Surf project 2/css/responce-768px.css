@@ -16,6 +16,9 @@
     width: 340px;
     bottom: 50px;
   }
+  .page_title_beach {
+    font-size: 76px;
+  }
   .beach_shore{
     width: 100%;
   }
@@ -31,6 +34,9 @@
   .shores_collage{
     padding-top: 15px;
     padding-left: 120px;
+  }
+  .shore_title_text {
+    font-size: 38px;
   }
   .shores_collage_row {
     flex-direction: column;
@@ -91,7 +97,7 @@
     display: none;
   }
   .travel_airline {
-    bottom: 150px;
+    bottom: 120px;
   }
   .travel_flight_character {
     position: relative;

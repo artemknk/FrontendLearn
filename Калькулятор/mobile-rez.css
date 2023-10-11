@@ -1,0 +1,29 @@
+@media (max-width: 500px) {
+  .calc {
+    box-shadow: none;
+    width: 100vw;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    align-content: flex-start;
+  }
+  .enter-input {
+    margin-bottom: 40px;
+  }
+  .numContainer {
+    width: 70%;
+  }
+  .num, .numC {
+    width: 30%;
+    height: 13vw;
+    font-size: 10vw;
+  }
+  .sign, .equal {
+    width: 100%;
+    height: 10.5vw;
+    font-size: 10vw;
+  }
+  .signContainer {
+    width: 23%;
+  }
+}

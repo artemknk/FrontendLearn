@@ -1,0 +1,253 @@
+@media(max-width: 600px) {
+  .header {
+    width: 80px;
+  }
+  .header_btn, .header_p {
+    font-size: 30px;
+  }
+  .header_btn_conteiner {
+    height: 150px;
+  }
+  .big_date {
+    font-size: 60px;
+  }
+  .page_title {
+    right: 20px;
+  }
+  .page_title_beach {
+    font-size: 36px;
+  }
+  .beach {
+    right: 20px;
+    width: 200px;
+  }
+  .beach_shore_name {
+    font-size: 18px;
+  }
+  .shores_collage {
+    padding-top: 0px;
+    padding-left: 90px;
+    padding-right: 10px;
+    height: auto;
+  }
+  .shores_collage_location {
+    left: 0px;
+    font-size: 16px;
+    letter-spacing: 6px;
+  }
+  .shores_collage_name {
+    margin: 40px 0 20px;
+    font-size: 35px;
+  }
+  .travel {
+    height: 150vh;
+  }
+  .travel_shore_title {
+    right: 10px;
+  }
+  .travel_flight_character {
+    position: absolute;
+    top: 180px;
+    width: 67%;
+    height: 600px;
+  }
+  .travel_flight_box {
+    width: 100%;
+  }
+  .travel_airline_text {
+    font-size: 22px;
+    line-height: 46px;
+  }
+  .travel_airline {
+    margin-left: 0;
+  }
+  .travel_airline_page {
+    font-size: 16px;
+  }
+  .travel_airline_page:after {
+    bottom: 62px;
+    left: 110px;
+  }
+  .travel_img_beach {
+    display: none;
+  }
+  .shore_title_page {
+    font-size: 16px;
+  }
+  .shore_title_text {
+    line-height: 32px;
+    font-size: 19px;
+  }
+  .air_logo {
+    display: none;
+  }
+  .travel_airline {
+    position: absolute;
+    width: 195px;
+  }
+  .travel_title {
+    font-size: 65px;
+    right: 10px;
+  }
+  .travel_title::after {
+    left: 140px;
+  }
+  .btn_cont_travel {
+    width: 194px;
+    gap: 5px;
+    bottom: 15px;
+    position: absolute;
+  }
+  .travel_flight_btn_span {
+    font-size: 24px;
+  }
+  .travel_flight_btn {
+    padding-left: 8px;
+    background-size: 20px;
+    width: 120px;
+    height: 50px;
+    font-size: 22px;
+    background-position: 88px;
+  }
+  .sleep {
+    height: 150vh;
+  }
+  .sleep_title {
+    font-size: 65px;
+    right: 10px;
+    margin-left: 0;
+    position: relative;
+  }
+  .sleep_title:after {
+    left: 98px;
+  }
+  .sleep_img_hotel {
+    display: none;
+  }
+  .sleep_resorts_title {
+    right: 5px;
+    position: relative;
+    top: 10px;
+  }
+  .resorts_title_page {
+    font-size: 16px;
+  }
+  .resorts_title_page:before {
+    right: 125px;
+  }
+  .resorts_title_text {
+    font-size: 22px;
+    line-height: 50px;
+  }
+  .sleep_rating {
+    top: 300px;
+    margin-left: 0;
+    position: static;
+  }
+  .sleep_rating_page {
+    font-size: 16px;
+  }
+  .sleep_rating_page:after {
+    left: 200px;
+    top: 254px;
+  }
+  .sleep_rating_text {
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .rating_stars {
+    margin-left: -15px;
+  }
+  div.rating_stars img {
+    height: 40px;
+  }
+  .sleep_resorts_character {
+    margin: 0;
+    position: relative;
+    top: 155px;
+  }
+  .sleep_resorts_box {
+    width: 230px;
+    height: 130px;
+    bottom: 121px;
+  }
+  .sleep_resorts_info {
+    font-size: 24px;
+  }
+  .sleep_resorts_text {
+    font-size: 16px;
+  }
+  .btn_cont_sleep {
+    width: 190px;
+    gap: 5px;
+    bottom: 15px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+  .sleep_resorts_btn_span {
+    font-size: 24px;
+  }
+  .sleep_resorts_btn {
+    padding-left: 8px;
+    background-size: 20px;
+    width: 90px;
+    height: 50px;
+    font-size: 22px;
+    background-position: 64px;
+  }
+  .shop_title {
+    font-size: 65px;
+    margin-left: 10px;
+  }
+  .shop_title:after {
+    left: 84px;
+  }
+  .surfboard_cont {
+    display: none;
+  }
+  .shop_style_title {
+    margin-top: 55px;
+    margin-left: -40px;
+    position: relative;
+    width: 220px;
+  }
+  .shop_title_page {
+    font-size: 16px;
+  }
+  .shop_title_text {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .btn_cont_shop {
+    display: flex;
+    justify-content: center;
+    top: -135px;
+    left: -35px;
+    width: auto;
+    margin: 170px auto 0;
+    gap: 8px;
+  }
+  .shop_btn_span {
+    font-size: 26px;
+  }
+  .shop_btn {
+    font-size: 26px;
+    width: 92px;
+    height: 46px;
+    background-position: 60px;
+  }
+  .shop_stars {
+    margin-left: -50px;
+  }
+  .accessories_block {
+    left: 120px;
+    bottom: 220px;
+    width: 190px;
+  }
+  .accessories_article {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}

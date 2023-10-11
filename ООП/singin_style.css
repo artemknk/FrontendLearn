@@ -1,0 +1,59 @@
+.errMessage {
+  font-size: 12px;
+  color: red;
+  visibility: hidden;
+  font-family: sans-serif;
+}
+.visible{
+  visibility: visible;
+}
+body {
+  color: rgb(190, 81, 81);
+}
+.modalSignIn {
+  width: 400px;
+  margin: 0 auto;
+  height: auto;
+  padding: 10px 0;
+  border-radius: 15px;
+  background: #fffee5;
+  box-shadow: 10px 10px 40px #a6a595, -10px -10px 40px #ffffff;
+}
+#authForm {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authInp {
+  font-size: 20px;
+  padding-left: 20px;
+  height: 30px;
+  border-radius: 99px;
+  background: #e4e3be;
+  box-shadow: inset 32px 32px 84px #a2a187,
+              inset -32px -32px 84px #fffff5;
+}
+
+.submitBtn {
+  width: 170px;
+  height: 30px;
+  font-size: 18px;
+  padding: 0;
+  margin: 0 auto;
+  border-radius: 18px;
+  background: linear-gradient(315deg, #f4f3cb, #cdccab);
+}
+.submitBtn:active {
+  background: #e4e3be;
+}
+.regLink {
+  text-align: center;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+.regLink:hover {
+  text-decoration: underline;
+}
+

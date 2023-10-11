@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authorization</title>
+  <link rel="stylesheet" href="./singin_style.css">
+</head>
+<body>
+  <section class="modalSignIn">
+    <form id="authForm" class="authForm">
+      <input class = "authInp" type="text" name="email" placeholder="E-mail">
+      <p class="errMessage">Косяк с мэйлом</p>
+      <input class = "authInp" type="password" name="password" placeholder="Пароль">
+      <p class="errMessage">Косяк с паролем. Минимум 8 символов. Заглавную букву, цифру и спецсимвол. </p>
+      <button class="submitBtn" disabled >Войти</button>
+      <a href="./registration.html" class="regLink">Регистрация</a>
+    </form>
+    
+  </section>
+
+  <script type="module" src="./components/SingIn.js"></script>
+</body>
+</html>

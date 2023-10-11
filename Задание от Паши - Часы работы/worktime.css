@@ -1,0 +1,167 @@
+.body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#work_time__section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding-right: 30px;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+  font-size: 28px;
+  padding-top: 25px;
+}
+.days_of_week {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.week_day {
+  border-bottom: 2px solid black;
+  height: 40px;
+  width: 34px;
+}
+.week_day:hover {
+  border-bottom: 3px solid black;
+  font-weight: bold;
+}
+.Task{
+  /* border: solid 1px gray; */
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.choose_btn {
+  color: red;
+}
+
+.working_day_time {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+  width: 410px;
+  height: 80px;
+  gap: 10px;
+}
+.disabled{
+  display: none;
+}
+.closeTask{
+  opacity: 0.5;
+}
+.addtask {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 50px;
+  width: auto;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+.create_task {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  gap: 10px;
+  width: 500px;
+  padding: 25px 40px;
+  height: 350px;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  /* background-color: rgb(255, 255, 255); */
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.open{
+  visibility: visible;
+}
+
+label, h2{
+  color:  rgb(0, 0, 0);
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.time_date_flex {
+  display: flex;
+  width: 400px;
+  gap: 20px;
+  align-items: baseline
+}
+.flex_form {
+  display: flex;
+}
+.inputs_form {
+  width: 400px;
+  margin: 10px auto;
+  border: 1px solid black;
+  background-color: #fff;
+}
+.input_btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 4px;
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  color: white;
+}
+.close_btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  color: white;
+  border-radius: 50%;
+  background-color: black;
+}
+/* .weekend_day_time{
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+  width: 410px;
+  height: 80px;
+  gap: 10px;
+}
+
+.weekend_time{
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+  width: 410px;
+  height: 80px;
+  gap: 10px;
+} */

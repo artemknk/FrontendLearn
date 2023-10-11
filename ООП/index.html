@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ООП</title>
+  <!-- <link rel="stylesheet" href="../Reset CSS/reset.css"> -->
+  <link rel="stylesheet" href="index_style.css">
+</head>
+<body>
+  <section class="section">
+    <div class="section_btns">
+      <button class="addTask"></button>
+      <button class="exitBtn"></button>
+    </div>
+    <div class="days_of_week">
+      <button class="week_day Monday">Пн</button>
+      <button class="week_day Tuesday">Вт</button>
+      <button class="week_day Wednesday">Ср</button>
+      <button class="week_day Thursday">Чт</button>
+      <button class="week_day Friday">Пт</button>
+      <button class="week_day Saturday">Сб</button>
+      <button class="week_day Sunday">Вс</button>
+    </div>
+  </section>
+
+  <section class="modal modalWindow">
+    <button class="closeBtn"></button>
+    <form class ="taskForm">
+      <p class="newTask">Новая задача</p>
+      <input class="formInput text" type="text" name="title" placeholder="Название задачи">
+      <input class="formInput time" type="time" name="time" placeholder="Время">
+      <select class="formInput date" name="day">
+        <option value="1">Пн</option>
+        <option value="2">Вт</option>
+        <option value="3">Ср</option>
+        <option value="4">Чт</option>
+        <option value="5">Пт</option>
+        <option value="6">Сб</option>
+        <option value="7">Вс</option>
+      </select>
+      <textarea class="formInput desText" name="description" placeholder="Описание задачи"></textarea>
+      <button class="btnInput"></button>
+    </form>
+  </section>
+
+  <section class="modalEdit modalWindow">
+    <button class="closeBtn"></button>
+    <form class ="taskFormEdit">
+      <p class="newTask">Редактирование задачи</p>
+      <input class="formInput text" type="text" name="title" placeholder="Название задачи">
+      <input class="formInput time" type="time" name="time" placeholder="Время">
+      <select class="formInput date" name="day">
+        <option value="1">Пн</option>
+        <option value="2">Вт</option>
+        <option value="3">Ср</option>
+        <option value="4">Чт</option>
+        <option value="5">Пт</option>
+        <option value="6">Сб</option>
+        <option value="7">Вс</option>
+      </select>
+      <textarea class="formInput desText" name="description" placeholder="Описание задачи"></textarea>
+      <button class="btnInput"></button>
+    </form>
+  </section>
+
+  <script type="module" src="./components/App.js"></script>
+</body>
+</html>

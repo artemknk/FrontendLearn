@@ -1,0 +1,46 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.section {
+  width: 51rem;
+  display: flex;
+  justify-content: center;
+  margin: 8em auto;
+  gap: 2em;
+}
+.inputs {
+  gap: 2em;
+  width: 20em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: #fffee5;
+  box-shadow: 10px 10px 40px #a6a595, -10px -10px 40px #ffffff;
+  padding: 2em;
+}
+.regInp {
+  color: black;
+  font-size: 18px;
+  height: 2em;
+  border-radius: 20px;
+  background: #e4e3be;
+  box-shadow: inset 32px 32px 84px #a2a187,
+              inset -32px -32px 84px #fffff5;
+  padding-left: 1em;
+
+}
+.btn {
+  height: 2em;
+  font-size: 1.5em;
+  border: none;
+  box-shadow: inset 0 0 0 0 #000000;
+  color: #000000;
+  padding: 0 .25rem;
+  margin: 0 -.25rem;
+  transition: linear 1.5s;
+}
+.btn:hover {
+  box-shadow: inset 51em 0 0 0 #000000;
+  cursor: pointer;
+  color: white;
+}

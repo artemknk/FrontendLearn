@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Time</title>
+  <link rel="stylesheet" href="../Reset CSS/reset.css">
+  <link rel="stylesheet" href="./worktime.css">
+</head>
+<body>
+  <section id="work_time__section">    
+    <button class="addtask">Add Task</button>
+    <div class="days_of_week">
+      <button class="week_day Monday">Пн</button>
+      <button class="week_day Tuesday">Вт</button>
+      <button class="week_day Wednesday">Ср</button>
+      <button class="week_day Thursday">Чт</button>
+      <button class="week_day Friday">Пт</button>
+      <button class="week_day Saturday">Сб</button>
+      <button class="week_day Sunday">Вс</button>
+    </div>
+    <div class="working_day_time"></div> 
+    <div class="Task disabled" >
+      <div class="time_clock">
+        10.00 - 12.00
+      </div>
+      <div class="time_order">
+        Приём заказов с 10.00 до 23.15
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <div class="create_task">
+    <button class="close_btn">X</button>
+    <form id="form" action="">
+      <h2>Новая Задача</h2>
+      <input class="inputs_form" type="text" name="task" placeholder="Название задачи">
+      <div class="time_date_flex">
+        <label >Время</label>
+        <input class="inputs_form flex_form" type="time" name="time" placeholder="Время">
+        <label >Дата</label>
+        <input class="inputs_form flex_form" type="date" name="date" placeholder="Дата">
+      </div>
+      <button class="input_btn">Создать</button>
+    </form>
+  </div>
+  
+  <script src="./worktime.js"></script>
+</body>
+</html>
