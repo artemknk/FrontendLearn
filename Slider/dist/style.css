@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+.slider {
+    width: 800px;
+    height: 600px;
+    position: fixed;
+    top: 0;bottom: 0;right: 0;left: 0;
+    margin: auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.slides {
+    display: flex;
+    width: 740px;
+    position: absolute;
+    top: 0;bottom: 0;right: 0;left: 0;
+    margin: auto;
+    overflow: hidden;
+}
+.action {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+}
+.sliderMenu {
+    position: absolute;
+    display: block;
+    top: 0;bottom: 0;right: 0;left: 0;
+    padding: 50px 15px;
+    z-index: 100;
+    border: 1px solid black;
+    margin: auto;
+    width: 400px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+}
+.addInp {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.hidden {
+    display: none;
+}
+.inp_cont {
+    display: flex;
+}
+.sliderInput {
+    width: 95%;
+}
+.sliderSaveBtn {
+    position: absolute;
+    bottom: 80px;left:0;right: 0;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height: 30px;
+    
+}
+.slidesMenu_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.slide{
+    display: block;
+    width: 100%;
+}
+
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}

@@ -131,7 +131,7 @@ textarea::placeholder {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 30px 1fr;
+  grid-template-rows: 70px 30px 1fr;
   grid-gap: 10px;
 }
 .closeBtn {
@@ -232,7 +232,7 @@ textarea::placeholder {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 30px 1fr;
+  grid-template-rows: 70px 30px 1fr;
   grid-gap: 10px;
 }
 .desText {
