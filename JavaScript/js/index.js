@@ -1,4 +1,4 @@
-import app from './components/Model/App.js';
+import App from './components/Model/App.js';
 import Product from './components/Product.js';
 import ProductCart from './components/ProductCart.js';
 import Api from './components/Model/Api.js';
@@ -6,13 +6,11 @@ import Cart from './components/Cart.js';
 import Categorys from './components/Categorys.js';
 import Profile from './components/Profile.js';
 import Header from './components/Header.js';
-
+import Search from './components/Search.js';
 
 const productsSection = document.querySelector('.products');
 const cartButton = document.querySelector('.cart__button');
 const cart = document.querySelector('.cart');
-const header = document.querySelector('.header');
-const headerButtons = document.querySelector('.header__buttons');
 const cartContainer = document.querySelector('.cart__container');
 const fullPrice = document.querySelector('.full__price');
 const payButton = document.querySelector('.cart__pay');
@@ -39,10 +37,12 @@ const categorysClearButton = document.querySelector('.categorys__clear-button');
 const burgerMenuButton = document.querySelector('.burger__menu');
 
 const api = new Api();
+const app = new App();
 const profile = new Profile(userModal);
 const viewCart = new Cart(cart);
 const viewCategorys = new Categorys(categorysContainer);
 const viewHeader = new Header(document.body);
+const viewSearch = new Search(searchProductOverlay);
 
 api.getProducts()
   .then(data => {
@@ -85,27 +85,16 @@ function editUserProfileOpen() {
 }
 async function saveEditProfile(event) {
   event.preventDefault();
-  const editProfileValues = {
-    firstName: overlayForm.querySelector('#name').value,
-    lastName: overlayForm.querySelector('#surname').value,
-    email: overlayForm.querySelector('#email').value,
-    phone: overlayForm.querySelector('#phone').value
-  }
-  const data = await api.updateUser(editProfileValues, app.user.id);
+  app.setEditProfileValues(overlayForm);
+  const data = await api.updateUser(app.editProfileValues, app.user.id);
   profile.setProfile(data);
   app.setUser(data);
   editProfileOverlay.classList.add('hidden');
 }
 async function saveNewProduct(event) {
   event.preventDefault();
-  const newProduct = {
-    title: addProductForm.elements['title'].value,
-    description: addProductForm.elements['description'].value,
-    category: addProductForm.elements['category'].value,
-    price: addProductForm.elements['price'].value,
-    images: [addProductForm.elements['image'].value]
-  }
-  const newProductData = await addNewProduct(newProduct);
+  app.setNewProduct(addProductForm);
+  const newProductData = await addNewProduct(app.newProduct);
   app.setCatalog([...app.catalog, newProductData]);
   app.setCategorys([...new Set(app.catalog.map(product => product.category))]);
   renderProducts(newProductData, 'prependFile');
@@ -147,20 +136,22 @@ function addToCart(obj) {
   const cartItem = new ProductCart();
   cartItem.render(obj);
   cartItem.appendFile(cartContainer);
-  
   obj.countItem = cartItem.countElem
-  cartItem.cartItemButtonPlus.addEventListener('click', () => {
-    obj.count++;
+
+  function cartItemEvent(){
     cartItem.countElem.textContent = obj.count;
     getTotal();
+  }
+  
+  cartItem.cartItemButtonPlus.addEventListener('click', () => {
+    obj.count++;
+    cartItemEvent()
   });
   
   cartItem.cartItemButtonMinus.addEventListener('click', () => {
-    if (obj.count > 1) {
-      obj.count--;
-      cartItem.countElem.textContent = obj.count;
-      getTotal();
-    }
+    if (obj.count === 0) return 
+    obj.count--;
+    cartItemEvent()
   });
 
   cartItem.cartItemRemove.addEventListener('click', () => {
@@ -198,26 +189,17 @@ function orderSuccess(data) {
 }
 function searchProductOpenInput() {
   if (window.matchMedia('(max-width: 500px)').matches) {
-    searchProductOverlay.classList.remove('hidden__search-overlay');
+    viewSearch.openSearchInput();
   } else {
     viewHeader.toggleHeader();
-    searchProductOverlay.classList.toggle('hidden__search-overlay');
+    viewSearch.toggleSearchInput();
   }
 }
 function clearSearchInput() {
   searchProductInput.value = '';
   searchProduct();
-  const allProducts = productsSection.querySelectorAll('.product');
-  allProducts.forEach(product => {product.classList.remove('search__product')});
-  searchProductOverlay.classList.add('hidden__search-overlay');
+  viewSearch.closeSearchInput();
   viewHeader.closeHeader();
-}
-function removeSearchClasses() {
-  productsSection.classList.remove('search__products');
-  const allProducts = productsSection.querySelectorAll('.product');
-  allProducts.forEach(product => {
-    product.classList.remove('search__product');
-  });
 }
 function searchProduct() {
   const allProducts = productsSection.querySelectorAll('.product');
@@ -227,9 +209,6 @@ function searchProduct() {
   searchProducts.forEach(productData => {
     renderProducts(productData, 'appendFile');
   });
-  if (searchValue === '') {
-    removeSearchClasses();
-  }
 }
 
 function searchProductByCategorys() {
@@ -241,10 +220,7 @@ function searchProductByCategorys() {
       allProducts.forEach(product => {product.remove()});
       const searchProducts = app.catalog.filter(product => product.category === category.textContent);
       searchProducts.forEach(productData => {renderProducts(productData, 'appendFile')});
-      removeSearchClasses();
-      const allCategoryNames = categorysContainer.querySelectorAll('.category__name');
-      allCategoryNames.forEach(category => category.classList.remove('category__name--active'));
-      category.classList.add('category__name--active');
+      viewCategorys.activeCategory(category);
       viewCategorys.close();
     });
   });
@@ -253,8 +229,7 @@ function searchProductByCategorys() {
 
 function clearCategorysSearch() {
   viewCategorys.close();
-  const allCategoryNames = categorysContainer.querySelectorAll('.category__name');
-  allCategoryNames.forEach(category => category.classList.remove('category__name--active'));
+  viewCategorys.activeCategory(category);
   const allProducts = productsSection.querySelectorAll('.product');
   allProducts.forEach(product => {product.remove()});
   app.catalog.forEach(productData => {renderProducts(productData, 'appendFile')});
@@ -269,7 +244,7 @@ function addProductOpen() {
 function openBurgerMenu() {
   if (window.matchMedia('(max-width: 500px)').matches) {
     viewHeader.toggleHeader();
-    searchProductOverlay.classList.add('hidden__search-overlay');
+    viewSearch.closeSearchInput();
   }
 }
 
@@ -277,8 +252,9 @@ userAuth();
 cartButton.addEventListener('click', () => {
   viewCart.open()
   viewHeader.closeHeader();
-  searchProductOverlay.classList.add('hidden__search-overlay');
+  viewSearch.closeSearchInput();
 });
+
 closeButtons.forEach(btn => btn.addEventListener('click', () => closeModal(btn)));
 userLogoutButton.addEventListener('click', logout);
 userEditButton.addEventListener('click', editUserProfileOpen);

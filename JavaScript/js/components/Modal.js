@@ -7,7 +7,6 @@ export default class Modal {
   open(){
     this.container.classList.remove('hidden');
   }
-
   close(){
     this.container.classList.add('hidden');
   }
