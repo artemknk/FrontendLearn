@@ -4,17 +4,21 @@ export default class Categorys extends Modal {
   constructor(container) {
     super(container);
   }
-  
-  renderCategory(category) {
+  renderCategory(categorys) {
     const categoryName = document.createElement('p');
     categoryName.classList.add('category__name');
-    categoryName.textContent = category;
+    categoryName.textContent = categorys;
     this.container.appendChild(categoryName);
   }
-
-  activeCategory(category) {
+  deleteCategories() {
+    const elementsToRemove = this.container.querySelectorAll('p.category__name');
+    elementsToRemove.forEach(element => element.remove());
+  }
+  activeCategory(categorys) {
+    categorys.classList.add('category__name--active');
+  }
+  clearCategorys() {
     const allCategoryNames = this.container.querySelectorAll('.category__name');
     allCategoryNames.forEach(category => category.classList.remove('category__name--active'));
-    category.classList.add('category__name--active');
   }
 }

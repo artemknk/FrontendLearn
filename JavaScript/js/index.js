@@ -7,6 +7,7 @@ import Categorys from './components/Categorys.js';
 import Profile from './components/Profile.js';
 import Header from './components/Header.js';
 import Search from './components/Search.js';
+import Forms from './components/Forms.js';
 
 const productsSection = document.querySelector('.products');
 const cartButton = document.querySelector('.cart__button');
@@ -25,7 +26,10 @@ const editProfileOverlay = document.querySelector('.overlay');
 const overlayForm = editProfileOverlay.querySelector('.form__edit-profile');
 const addProductButton = document.querySelector('.add__product');
 const addProductOverlay = document.querySelector('.add__product-modal');
+const updateProductOverlay = document.querySelector('.update__product-modal');
 const addProductForm = addProductOverlay.querySelector('.form__add-product');
+const updateProductForm = updateProductOverlay.querySelector('.form__update-product');
+const productUpdateButton = updateProductOverlay.querySelector('.product__update-button');
 const productSaveButton = addProductForm.querySelector('.product__save-button');
 const searchProductButton = document.querySelector('.search__product-button');
 const searchProductOverlay = document.querySelector('.search__container');
@@ -36,6 +40,7 @@ const categorysContainer = document.querySelector('.categorys__container');
 const categorysClearButton = document.querySelector('.categorys__clear-button');
 const burgerMenuButton = document.querySelector('.burger__menu');
 
+
 const api = new Api();
 const app = new App();
 const profile = new Profile(userModal);
@@ -43,6 +48,8 @@ const viewCart = new Cart(cart);
 const viewCategorys = new Categorys(categorysContainer);
 const viewHeader = new Header(document.body);
 const viewSearch = new Search(searchProductOverlay);
+const formAddProduct = new Forms(addProductForm);
+const formUpdateProduct = new Forms(updateProductForm);
 
 api.getProducts()
   .then(data => {
@@ -66,6 +73,7 @@ async function userAuth() {
       loginLink.classList.remove('hidden__link');
     }
   }
+
 async function addNewProduct(body) {
   return await api.addNewProduct(body);
 }
@@ -83,6 +91,7 @@ function editUserProfileOpen() {
   overlayForm.querySelector('#phone').value = app.user.phone;
   editProfileOverlay.classList.remove('hidden');
 }
+
 async function saveEditProfile(event) {
   event.preventDefault();
   app.setEditProfileValues(overlayForm);
@@ -93,13 +102,34 @@ async function saveEditProfile(event) {
 }
 async function saveNewProduct(event) {
   event.preventDefault();
-  app.setNewProduct(addProductForm);
-  const newProductData = await addNewProduct(app.newProduct);
+  const newProductData = await addNewProduct(formAddProduct.getFormValues());
   app.setCatalog([...app.catalog, newProductData]);
   app.setCategorys([...new Set(app.catalog.map(product => product.category))]);
   renderProducts(newProductData, 'prependFile');
   viewCategorys.renderCategory(newProductData.category);
+  formAddProduct.resetForm();
   addProductOverlay.classList.add('hidden');
+}
+function updateProductFormData(obj) {
+  formUpdateProduct.setFormValues(obj);
+  app.setUpdateProduct(obj);
+  }
+async function updateProduct(event) {
+  event.preventDefault();
+  const id = app.updateProduct.id;
+  const index = app.catalog.findIndex((product) => product.id === id);
+  const updatedProduct = await api.updateProduct(formUpdateProduct.getFormValues(), id);
+  app.catalog[index] = updatedProduct;
+  app.categorys = [...new Set(app.catalog.map((product) => product.category))];
+  app.setCategorys(app.categorys);
+  app.setUpdateProduct(updatedProduct);
+  viewCategorys.deleteCategories();
+  app.categorys.forEach(viewCategorys.renderCategory.bind(viewCategorys));
+  productsSection.innerHTML = '';
+  app.catalog.forEach((productData) => {
+    renderProducts(productData, 'appendFile');
+  });
+  updateProductOverlay.classList.add('hidden');
 }
 function logout() {
   localStorage.removeItem('token');
@@ -128,6 +158,12 @@ function renderProducts(obj, method) {
       app.setCartProducts([...app.cartProducts, objectCartElement]);
     }
     getTotal()
+  });
+
+  product.btnEdit.addEventListener('click', () => {
+    updateProductOverlay.classList.remove('hidden');
+    updateProductFormData(obj);
+    
   });
   return product;
 }
@@ -220,6 +256,7 @@ function searchProductByCategorys() {
       allProducts.forEach(product => {product.remove()});
       const searchProducts = app.catalog.filter(product => product.category === category.textContent);
       searchProducts.forEach(productData => {renderProducts(productData, 'appendFile')});
+      viewCategorys.clearCategorys();
       viewCategorys.activeCategory(category);
       viewCategorys.close();
     });
@@ -229,7 +266,7 @@ function searchProductByCategorys() {
 
 function clearCategorysSearch() {
   viewCategorys.close();
-  viewCategorys.activeCategory(category);
+  viewCategorys.clearCategorys();
   const allProducts = productsSection.querySelectorAll('.product');
   allProducts.forEach(product => {product.remove()});
   app.catalog.forEach(productData => {renderProducts(productData, 'appendFile')});
@@ -260,6 +297,7 @@ userLogoutButton.addEventListener('click', logout);
 userEditButton.addEventListener('click', editUserProfileOpen);
 overlayForm.addEventListener('submit', saveEditProfile);
 productSaveButton.addEventListener('click', saveNewProduct);
+productUpdateButton.addEventListener('click', updateProduct);
 payButton.addEventListener('click', cartPay);
 addProductButton.addEventListener('click', addProductOpen);
 searchProductButton.addEventListener('click', searchProductOpenInput);

@@ -39,4 +39,14 @@ export default class Api {
     })
     .then(res => res.json())
   }
+  async updateProduct(body, id) {
+  return await fetch(`https://dummyjson.com/products/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(
+      body
+    )
+  })
+  .then(res => res.json())
+}
 }

@@ -33,17 +33,16 @@ export default class App {
     this.user.phone = data.phone || '';
     this.user.id = data.id || '';
   }
-
-  setNewProduct(addProductForm) {
-    this.newProduct = {
-      title: addProductForm.elements['title'].value,
-      description: addProductForm.elements['description'].value,
-      category: addProductForm.elements['category'].value,
-      price: addProductForm.elements['price'].value,
-      images: [addProductForm.elements['image'].value]
+  setUpdateProduct(data = {}) {
+    this.updateProduct = {
+      id: data.id,
+      title: data.title,
+      price: data.price,
+      description: data.description,
+      category: data.category,
+      images: data.images
     }
   }
-
   setEditProfileValues(editProfileForm) {
     this.editProfileValues = {
       firstName: editProfileForm.elements['name'].value,
